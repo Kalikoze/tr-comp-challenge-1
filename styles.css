@@ -1,0 +1,145 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  float: left;
+  width: 60%;
+  height: 100vh
+}
+
+.content-box {
+  width: calc(100% / 3);
+  height: calc(100vh / 3);
+  text-align: center;
+  padding: 20px;
+}
+
+header.content-box {
+  width: calc((100%/3) * 2);
+  text-align: left;
+}
+
+aside{
+  background-image: url('images/cruzial-timez.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  float: left;
+  width: 40%;
+  height: 100vh;
+}
+
+/* Colors */
+
+h1, p {
+  color: white;
+  text-transform: uppercase;
+}
+
+header p {
+  text-transform: none;
+}
+
+#resume, #contact {
+  background-color: #2C2C2C;
+  color: white;
+  border: 2px solid white;
+  width: 150px;
+  height: 50px;
+}
+
+#resume {
+  margin-left: 30px;
+  margin-right: 15px;
+}
+
+header, .blog {
+  background-color: #2C2C2C;
+}
+
+.profile {
+  background-color: #151313;
+}
+
+.experience, .contact {
+  background-color: #000;
+}
+
+.education {
+  background-color: #E2D156;
+}
+
+.social-menu, .portfolio {
+  background-color: #464646;
+}
+
+img {
+  margin-top: 25%;
+  height: 50px;
+  width: 50px;
+}
+
+header img {
+  margin-top: -30px;
+  height: 15px;
+  width: 15px;
+}
+
+h1 {
+  padding-left: 30px;
+}
+
+p {
+  margin: 30px;
+}
+
+@media (max-width: 1000px) {
+
+  #resume, #contact {
+    height: 38px;
+    width: 100px;
+    transition: all 500ms ease;
+  }
+}
+
+@media (max-width: 850px) {
+
+  .menu, aside {
+    width: 50%;
+  }
+
+  .content-box {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header.content-box {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+
+  #resume, #contact {
+    margin-bottom: 30px;
+  }
+
+  img {
+    margin-top: 0px;
+  }
+}
+
+@media (max-width: 500px) {
+
+}
