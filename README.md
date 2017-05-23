@@ -1,3 +1,7 @@
+![]()
+
+![]()
+
 ## Synopsis
 
 This project is static webpage for a music artist.  The application was developed in order to practice Flexbox, design, and responsiveness.  This project was developed for a class at the Turing School of Software and Design.
