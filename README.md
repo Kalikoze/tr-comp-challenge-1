@@ -1,4 +1,4 @@
-![screenshot](images/Final-Comp)
+![screenshot](images/Final-Comp.png)
 
 ## Synopsis
 
