@@ -5,52 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Static Comp Challenge 1</title>
 
-    <link href="styles.css" type="text/css" rel="stylesheet">
     <link href="normalize.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link href="styles.css" type="text/css" rel="stylesheet">
   </head>
   <body>
-    <main>
-      <section class="menu">
-        <header class="content-box">
-              <h1>Cruzial Timez</h1>
-              <p> I am a rap artist, producer, and engineer. Check out some of the music I've produced in the past.</p>
-              <button id="resume">
-                <img src="images/download.svg">
-                Resume</button>
-              <button id="contact">
-                <img src="images/info.svg">
-                Contact</button>
-        </header>
-        <article class="content-box profile">
-          <img src="images/profile.svg">
-          <p>Profile</p>
-        </article>
-        <article class="content-box experience">
-          <img src="images/experience.svg">
-          <p>Experience</p>
-        </article>
-        <article class="content-box education">
-          <img src="images/education.svg">
-          <p>Education</p>
-        </article>
-        <article class="content-box blog">
-          <img src="images/blog.svg">
-          <p>Blog</p>
-        </article>
-        <article class="content-box social-menu">
-          <img src="images/social.svg">
-          <p>Social Menu</p>
-        </article>
-        <article class="content-box contact">
-          <img src="images/contact.svg">
-          <p>Contact</p>
-        </article>
-        <article class="content-box portfolio">
-          <img src="images/portfolio.svg">
-          <p>Portfolio</p>
-        </article>
-      </section>
-      <aside class="image"></aside>
+    <main class="menu">
+      <header class="content-box">
+            <h1>Cruzial Timez</h1>
+            <p> I'm a rap artist, producer, and engineer. Take a listen to some of the music I've produced in the past.</p>
+            <button id="resume">
+              <img src="images/download.svg">
+              Resume</button>
+            <button id="contact">
+              <img src="images/info.svg">
+              Contact</button>
+      </header>
+      <article class="content-box profile small-box">
+        <img src="images/profile.svg">
+        <p>Profile</p>
+      </article>
+      <article class="content-box experience small-box">
+        <img src="images/experience.svg">
+        <p>Experience</p>
+      </article>
+      <article class="content-box education small-box">
+        <img src="images/education.svg">
+        <p>Education</p>
+      </article>
+      <article class="content-box blog small-box">
+        <img src="images/blog.svg">
+        <p>Blog</p>
+      </article>
+      <article class="content-box social-menu small-box">
+        <img src="images/social.svg">
+        <p>Social Menu</p>
+      </article>
+      <article class="content-box contact small-box">
+        <img src="images/contact.svg">
+        <p>Contact</p>
+      </article>
+      <article class="content-box portfolio small-box">
+        <img src="images/portfolio.svg">
+        <p>Portfolio</p>
+      </article>
     </main>
+    <aside class="image">
+      <div class='button-container'>
+        <img src="images/left-arrow.svg" class="back">
+        <img src="images/right-arrow.svg" class="next">
+      </div>
+        <div class="dot-container">
+          <img src="images/record-button.svg" class="dot white">
+          <img src="images/record-button.svg" class="dot grey">
+          <img src="images/record-button.svg" class="dot grey">
+        </div>
+    </aside>
   </body>
 </html>

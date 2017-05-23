@@ -5,35 +5,90 @@
   margin: 0;
 }
 
+/* Structure for CSS */
+
+body {
+  display: flex;
+}
+
 .menu {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  float: left;
+  height: 100vh;
   width: 60%;
-  height: 100vh
 }
 
 .content-box {
-  width: calc(100% / 3);
   height: calc(100vh / 3);
-  text-align: center;
-  padding: 20px;
+  padding: 15px;
+  width: calc(100% / 3);
+}
+
+.small-box {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 header.content-box {
-  width: calc((100%/3) * 2);
   text-align: left;
+  width: calc((100%/3) * 2);
+}
+
+header img {
+  height: 15px;
+  margin-top: -30px;
+  width: 15px;
+}
+
+#resume {
+  margin-left: 30px;
+  margin-right: 15px;
+}
+
+img {
+  height: 50px;
+  width: 50px;
 }
 
 aside{
   background-image: url('images/cruzial-timez.jpg');
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  float: left;
-  width: 40%;
+  display: flex;
   height: 100vh;
+  position: relative;
+  width: 40%;
+}
+
+.button-container {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.back, .next  {
+  cursor: pointer;
+  margin: 0 20px;
+  opacity: 0.6;
+}
+
+.dot-container {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+
+.dot {
+  cursor: pointer;
+  height: 25px;
+  margin: 0 10px;
+  width: 15px;
 }
 
 /* Colors */
@@ -43,21 +98,12 @@ h1, p {
   text-transform: uppercase;
 }
 
-header p {
-  text-transform: none;
-}
-
 #resume, #contact {
   background-color: #2C2C2C;
-  color: white;
   border: 2px solid white;
-  width: 150px;
+  color: white;
   height: 50px;
-}
-
-#resume {
-  margin-left: 30px;
-  margin-right: 15px;
+  width: 150px;
 }
 
 header, .blog {
@@ -80,32 +126,93 @@ header, .blog {
   background-color: #464646;
 }
 
-img {
-  margin-top: 25%;
-  height: 50px;
-  width: 50px;
+.grey {
+  -khtml-opacity:.50;
+  -moz-opacity:.50;
+  -ms-filter:”alpha(opacity=50)”;
+  filter:alpha(opacity=50);
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.5);
+  opacity:.50;
 }
 
-header img {
-  margin-top: -30px;
-  height: 15px;
-  width: 15px;
-}
+/* Fonts */
 
 h1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
   padding-left: 30px;
 }
 
 p {
+  font-family: 'Roboto', sans-serif;
   margin: 30px;
+}
+
+header p {
+  text-transform: none;
+}
+
+article p {
+  margin: 30px 0;
+}
+
+/* Hover states */
+
+.small-box:hover {
+  -khtml-opacity:.50;
+  -moz-opacity:.50;
+  -ms-filter:”alpha(opacity=50)”;
+  filter:alpha(opacity=50);
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.5);
+  opacity:.50;
+}
+
+.back:hover, .next:hover {
+  opacity: 1;
+}
+
+button:hover {
+  -khtml-opacity:.50;
+  -moz-opacity:.50;
+  -ms-filter:”alpha(opacity=50)”;
+  filter:alpha(opacity=50);
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.5);
+  opacity:.50;
+  cursor: pointer;
+}
+
+/* Media Queries */
+
+@media (min-width: 1200px) {
+
+  h1 {
+    font-size: 48px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  img {
+    height: 75px;
+    width: 75px;
+  }
+
+  .dot {
+    width: 20px;
+  }
+
+  h1, img, .dot {
+    transition: all 500ms ease;
+  }
 }
 
 @media (max-width: 1000px) {
 
   #resume, #contact {
     height: 38px;
-    width: 100px;
     transition: all 500ms ease;
+    width: 100px;
   }
 }
 
@@ -116,30 +223,44 @@ p {
   }
 
   .content-box {
-    display: flex;
     flex-direction: row;
-    width: 100%;
     height: auto;
     padding: 0;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
   }
 
   header.content-box {
-    width: 100%;
-    height: auto;
     display: inline-block;
+    height: auto;
+    width: 100%;
   }
 
   #resume, #contact {
     margin-bottom: 30px;
+    height: 50px;
+    transition: all 500ms ease;
+    width: 125px;
   }
 
-  img {
-    margin-top: 0px;
+  article p {
+    margin: 30px 20px;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 650px) {
+  body {
+    flex-direction: column-reverse
+  }
 
+  .button-container {
+    height: 50vh;
+  }
+
+  .menu, aside {
+    width: 100%;
+  }
+
+  aside {
+    height: 50vh;
+  }
 }
